@@ -1,59 +1,61 @@
+/* Estilos Generales */
 body {
-    background-color: #5b2c04;
-    color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #8B4000; /* Anaranjado oscuro */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    background-color: #4C2800;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
+header img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Secciones */
+.bienvenida, .trofeos {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
 }
 
 .bienvenida {
-    background: url('URL_DE_LA_FORMACION') no-repeat center center/cover;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.historia {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.history-box {
-    width: 30%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 10px 0;
-}
-
-.jugadores .players-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.player-card {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
+    background-image: url('https://media.discordapp.net/attachments/1274208346253299724/1355677283150725351/ofiical.png');
 }
 
 .trofeos {
-    background: url('URL_DE_LA_FOTO_CAMPEONES') no-repeat center center/cover;
-    text-align: center;
-    padding: 50px 20px;
+    background-image: url('https://media.discordapp.net/attachments/1199099002596118631/1353165904246210590/image.png');
 }
 
-.links {
+/* Jugadores (Collage) */
+.jugadores-collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.jugador {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
     text-align: center;
-    margin: 30px 0;
 }
