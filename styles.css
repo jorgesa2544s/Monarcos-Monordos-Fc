@@ -36,6 +36,8 @@ section {
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
 section h2 {
@@ -65,8 +67,25 @@ section a:hover {
 
 .jugadores {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.jugadores-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.jugadores-image {
+    width: 30%;
+    margin-right: 2rem;
+}
+
+.jugadores-image img {
+    border-radius: 50%;
+    width: 100%;
 }
 
 .jugador {
@@ -76,11 +95,13 @@ section a:hover {
     text-align: center;
     width: 180px;
     margin: 1rem;
+    transition: transform 0.3s ease;
 }
 
 .jugador img {
     width: 100%;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .jugador h3 {
@@ -93,6 +114,14 @@ section a:hover {
     color: #ccc;
 }
 
+.jugador:hover {
+    transform: translateY(-10px);
+}
+
+.jugador:hover img {
+    transform: scale(1.1);
+}
+
 .trofeos {
     background-size: cover;
     background-position: center;
@@ -103,6 +132,7 @@ section a:hover {
     font-weight: bold;
     display: block;
     margin: 0.5rem 0;
+    font-size: 1.2rem;
 }
 
 .links {
@@ -117,6 +147,11 @@ section a:hover {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.links a:hover {
+    background-color: #333;
 }
 
 footer {
