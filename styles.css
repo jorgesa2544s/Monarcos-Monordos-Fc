@@ -1,117 +1,89 @@
-/* General page transition effect */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General body and layout */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  transition: background-color 0.5s ease;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-  transition: color 0.5s ease;
-}
-
-/* Add a hover effect to all links */
-a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-  color: #ff6347; /* Tomato color on hover */
-  transform: scale(1.1);
-}
-
-/* Header */
+/* Header styles */
 .header {
-  text-align: center;
-  padding: 20px;
-  background-color: #222;
-  color: white;
+    background-color: #111;
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
 }
 
-.monarcos-image {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-  margin-bottom: 20px;
-  transition: transform 0.5s ease;
+.header .logo {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-.monarcos-image:hover {
-  transform: scale(1.05);
+.header h1 {
+    font-size: 3rem;
+    color: #ff6f00; /* Naranja */
+    margin: 10px 0;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
+.header .subheading {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #ff6f00;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
+/* Main content section */
+.main-content {
+    padding: 40px;
+    text-align: center;
 }
 
-nav ul li a {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+.main-content h2 {
+    font-size: 2.5rem;
+    color: #ff6f00;
 }
 
-nav ul li a:hover {
-  color: #ff6347;
-  transform: scale(1.1);
+.main-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #ccc;
 }
 
-/* Introduction */
-.introduction {
-  text-align: center;
-  padding: 50px;
-  background-color: #fff;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.main-content .cta-buttons {
+    margin-top: 30px;
 }
 
-.introduction:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.main-content .btn {
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.main-content .btn:hover {
+    background-color: #ff9d3f;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #222;
-  color: white;
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    color: #888;
 }
 
-footer a {
-  color: #ff6347;
-  text-decoration: none;
+/* Add some nice transitions and hover effects */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Animation for loading content */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
+a:hover {
+    color: #ff6f00;
 }
