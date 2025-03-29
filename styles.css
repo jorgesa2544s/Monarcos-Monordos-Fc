@@ -1,197 +1,158 @@
-/* Reseteo de márgenes y padding */
-* {
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f5f5f5;
 }
 
-/* Fondo general */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffcc66; /* Anaranjado oscuro */
-    color: #333;
-}
-
-/* Header */
 header {
-    text-align: center;
-    background-color: #222;
+    background-color: #333;
     color: white;
-    padding: 2rem 0;
+    text-align: center;
+    padding: 20px;
 }
 
-header img {
-    max-width: 150px;
-    border-radius: 50%;
+header img.logo {
+    max-width: 100%;
+    height: auto;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-top: 1rem;
+    font-size: 3em;
+    margin: 10px 0;
 }
 
 /* Contenedor principal */
 .container {
-    width: 90%;
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding-top: 3rem;
 }
 
 /* Sección: Bienvenida */
 .bienvenida {
     background-size: cover;
     background-position: center;
-    padding: 5rem 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
     color: white;
-    transition: background 0.5s ease-in-out;
-}
-
-.bienvenida:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .bienvenida h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .bienvenida p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.2em;
 }
 
 /* Sección: Historia */
-section {
-    margin-bottom: 3rem;
+.historia {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.section-title {
-    font-size: 2.2rem;
+.historia .section-title {
+    font-size: 2.5em;
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #222;
+    margin-bottom: 20px;
 }
 
-.section-content p {
-    font-size: 1.1rem;
+.historia .section-content p {
+    font-size: 1.2em;
     line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 1rem;
 }
 
 /* Sección: Jugadores */
 .jugadores {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 3rem;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .jugador {
-    background: #fff;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    padding: 1.5rem;
+    width: 200px;
     text-align: center;
-    width: 23%;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.jugador:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .jugador img {
-    max-width: 100%;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .jugador h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 
 .jugador p {
-    font-size: 1rem;
+    font-size: 1em;
+    color: #555;
 }
 
 /* Sección: Trofeos */
 .trofeos {
-    background-image: url('https://media.discordapp.net/attachments/1199099002596118631/1353165904246210590/image.png');
-    background-size: cover;
-    background-position: center;
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .trofeos h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5em;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .trofeos ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 .trofeos li {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    margin: 10px 0;
 }
 
-/* Sección: Redes Sociales */
+/* Sección de Redes Sociales */
 .links {
     text-align: center;
-    margin-bottom: 3rem;
 }
 
 .links a {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
     text-decoration: none;
-    color: #222;
-    font-size: 1.2rem;
-    margin: 0 1rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid #222;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .links a:hover {
-    background-color: #222;
-    color: white;
+    background-color: #3cb371;
 }
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #333;
     color: white;
-    padding: 1rem;
     text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .jugadores {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .jugador {
-        width: 80%;
-        margin-bottom: 1.5rem;
-    }
+    padding: 10px;
+    margin-top: 20px;
 }
