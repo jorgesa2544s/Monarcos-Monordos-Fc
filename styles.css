@@ -24,15 +24,13 @@ h1, h2 {
 
 /* Bienvenida / Página Principal */
 #bienvenida {
-    background-color: #111;
+    background-image: url('https://th.bing.com/th/id/OIP.tc3he-uhMgBL5fowPlRAQwAAAA?rs=1&pid=ImgDetMain');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #fff;
     text-align: center;
     padding: 80px 20px;
-    background-image: url('https://media.discordapp.net/attachments/1199099002596118631/1355657356221874388/image-1.png?ex=67e9b9cc&is=67e8684c&hm=99a87d85dbd92760155674d0a4ef059228902df6d7334edb4cfb36a48235db9d&=&format=webp&quality=lossless');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 #bienvenida h1 {
