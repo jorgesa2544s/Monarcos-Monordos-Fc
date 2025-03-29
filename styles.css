@@ -1,158 +1,118 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
 }
 
 header {
     background-color: #333;
-    color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
-header img.logo {
+header .logo {
     max-width: 100%;
     height: auto;
 }
 
 h1 {
+    color: #fff;
     font-size: 3em;
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
-/* Contenedor principal */
 .container {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-/* Sección: Bienvenida */
 .bienvenida {
-    background-size: cover;
-    background-position: center;
+    background-color: #ff6600;
     color: white;
-    padding: 100px 20px;
+    padding: 40px;
     text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .bienvenida h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
 }
 
 .bienvenida p {
     font-size: 1.2em;
+    margin-top: 20px;
 }
 
-/* Sección: Historia */
-.historia {
-    background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
+.section-title {
+    font-size: 2em;
     margin-bottom: 20px;
+    color: #ff6600;
 }
 
-.historia .section-title {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
+.section-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
-.historia .section-content p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Sección: Jugadores */
 .jugadores {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 40px;
 }
 
 .jugador {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
 }
 
 .jugador img {
+    width: 100%;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
 }
 
 .jugador h3 {
-    font-size: 1.5em;
     margin-top: 10px;
 }
 
-.jugador p {
-    font-size: 1em;
-    color: #555;
+.trophies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Sección: Trofeos */
-.trofeos {
-    background-color: #fff;
-    padding: 40px 20px;
+.trophy {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
     border-radius: 10px;
-    margin-bottom: 40px;
+    width: 150px;
 }
 
-.trofeos h2 {
-    font-size: 2.5em;
+.trophy h3 {
+    font-size: 1.5em;
+    color: #ff6600;
+}
+
+.trophy p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.enlaces {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
-.trofeos ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-.trofeos li {
-    margin: 10px 0;
-}
-
-/* Sección de Redes Sociales */
-.links {
-    text-align: center;
-}
-
-.links a {
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
+.enlaces a {
+    margin: 0 15px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.links a:hover {
-    background-color: #3cb371;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    color: #ff6600;
+    font-size: 1.2em;
 }
