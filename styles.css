@@ -1,170 +1,117 @@
-/* Reseteo básico */
-* {
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
 }
 
-/* General */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-/* Sección general */
-.section {
-    padding: 50px;
-}
-
-/* Bienvenida / Página Principal */
-#bienvenida {
-    background-image: url('https://th.bing.com/th/id/OIP.tc3he-uhMgBL5fowPlRAQwAAAA?rs=1&pid=ImgDetMain');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#bienvenida h1 {
-    font-size: 3rem;
-    color: #ff6f00;
-    margin-bottom: 20px;
-}
-
-#bienvenida p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Historia */
-#historia {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#historia h2 {
-    font-size: 2.5rem;
-    color: #ff6f00;
-    margin-bottom: 20px;
-}
-
-#historia p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Trofeos */
-.trofeos {
-    padding: 60px;
-    text-align: center;
-    position: relative;
-    background-image: url('https://media.discordapp.net/attachments/1199099002596118631/1355657356221874388/image-1.png?ex=67e9b9cc&is=67e8684c&hm=99a87d85dbd92760155674d0a4ef059228902df6d7334edb4cfb36a48235db9d&=&format=webp&quality=lossless');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    z-index: 1;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 2s ease-in-out;
-}
-
+/* Animaciones */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(30px); }
+    0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-.trofeos h2 {
-    font-size: 3rem;
-    color: #ff6f00;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+/* Encabezado */
+header {
+    background-color: #4C4C4C;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
     margin-bottom: 20px;
+    border-radius: 50%;
+    border: 5px solid #fff;
 }
 
-.trofeos ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Contenedor Principal */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Títulos de Secciones */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #4C4C4C;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Estilo del texto */
+.section-content {
     font-size: 1.2rem;
-    margin-top: 20px;
-    text-align: left;
-    display: inline-block;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    animation: fadeIn 2s ease-out;
 }
 
-.trofeos ul li {
-    margin: 15px 0;
+/* Lista de Jugadores Destacados */
+.section-content ul {
     padding-left: 20px;
-    position: relative;
 }
 
-.trofeos ul li:before {
-    content: "🏆";
-    position: absolute;
-    left: -25px;
-    top: 0;
-    font-size: 1.5rem;
-}
-
-/* Jugadores */
-#jugadores {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#jugadores h2 {
-    font-size: 2.5rem;
-    color: #ff6f00;
-    margin-bottom: 20px;
-}
-
-#jugadores ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-#jugadores ul li {
-    margin: 10px 0;
+.section-content ul li {
+    margin-bottom: 10px;
     font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Redes Sociales */
-#contacto {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
+.section-content ul li:hover {
+    color: #4C4C4C;
+    transform: scale(1.05);
 }
 
-#contacto h2 {
-    font-size: 2.5rem;
-    color: #ff6f00;
-    margin-bottom: 20px;
-}
-
-#contacto ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-#contacto ul li {
-    margin: 10px 0;
-}
-
-#contacto a {
-    color: #ff6f00;
+/* Enlaces */
+.links a {
+    display: inline-block;
+    margin: 15px;
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 1.2rem;
+    color: #4C4C4C;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #4C4C4C;
+    color: #fff;
+}
+
+/* Estilo de los Trofeos */
+.trophy {
+    font-weight: bold;
+    color: #d6a700;
+}
+
+.trophy:hover {
+    color: #ff9900;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
 }
