@@ -1,64 +1,70 @@
-/* Estilos Generales */
+/* Estilo general y reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background: #f4f7fc;
     color: #333;
+    font-size: 1.2rem;
     line-height: 1.6;
-    transition: all 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 /* Header */
 header {
-    background: linear-gradient(45deg, #0099ff, #33ccff);
+    background: linear-gradient(135deg, #34b9ff, #0066cc);
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background 0.5s ease;
+    transition: background 0.3s ease-in-out;
+    animation: fadeIn 1s ease-out;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: white;
+    color: #fff;
+    font-size: 2.8rem;
     letter-spacing: 1px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    margin-bottom: 15px;
     font-weight: bold;
+    text-transform: uppercase;
+    animation: slideIn 0.5s ease-in-out;
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    gap: 30px;
+    list-style: none;
     padding: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 header nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    text-decoration: none;
     position: relative;
     padding: 5px;
     transition: color 0.3s ease, transform 0.3s ease;
+    transform: translateY(5px);
 }
 
 header nav ul li a:hover {
     color: #ffcc00;
-    transform: scale(1.1);
+    transform: translateY(-5px);
 }
 
 header nav ul li a:before {
@@ -79,50 +85,32 @@ header nav ul li a:hover:before {
     transform-origin: bottom left;
 }
 
-/* Main Content */
-main {
-    padding: 40px 15px;
-    max-width: 1200px;
-    margin: 30px auto;
-    background: #ffffff;
-    border-radius: 8px;
+/* Secciones */
+section {
+    padding: 40px;
+    margin: 30px 0;
+    background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.7s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-h2, h3 {
-    font-size: 2rem;
+section h2 {
     color: #333;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-bottom: 20px;
     text-transform: capitalize;
-    letter-spacing: 1px;
 }
 
-p, ul {
+section p {
     font-size: 1.1rem;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-}
-
-ul li:before {
-    content: '✔';
-    color: #33ccff;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.2rem;
-}
-
-/* Animations */
+/* Animaciones */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -134,10 +122,49 @@ ul li:before {
     }
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efecto hover sobre las secciones */
+section:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+/* Páginas de contenido: transiciones */
+.page {
+    animation: fadeInUp 1s ease-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
 /* Footer */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
     position: fixed;
@@ -145,18 +172,12 @@ footer {
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-footer p {
-    font-size: 1rem;
-    color: #fff;
 }
 
 footer a {
     color: #ffcc00;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -164,13 +185,30 @@ footer a:hover {
     color: #0099ff;
 }
 
-/* Hover effects for Sections */
-section:hover {
-    transform: scale(1.03);
-    transition: all 0.3s ease;
+/* Animación para cambio de página */
+.page-enter {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
-/* Media Queries for Responsiveness */
+.page-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.page-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.page-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -180,15 +218,7 @@ section:hover {
         flex-direction: column;
     }
 
-    header nav ul li {
-        margin-bottom: 10px;
-    }
-
-    main {
+    section {
         padding: 20px;
-    }
-
-    h2 {
-        font-size: 1.8rem;
     }
 }
