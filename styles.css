@@ -1,115 +1,47 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-/* Estilos para la cabecera */
-header {
-    background-color: #003366;
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-header p {
-    font-size: 1.2em;
-    margin: 10px 0 0 0;
-}
-
-/* Estilos para la navegación */
-nav {
+    padding: 1rem;
     background-color: #333;
     color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos para las secciones */
-section {
-    padding: 20px;
-    margin-top: 20px;
-}
-
-h2 {
-    font-size: 2em;
-    color: #003366;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Estilos para los jugadores destacados */
-.jugadores {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.jugador {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.jugador h3 {
-    font-size: 1.5em;
-    color: #003366;
-    margin: 0;
-}
-
-.jugador p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* Estilos para las imágenes de los jugadores */
-.jugador img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* Estilos para los enlaces de contacto */
-a {
-    color: #003366;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos para el pie de página */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 10px;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
